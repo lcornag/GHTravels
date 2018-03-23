@@ -70,6 +70,7 @@
     text-align: right;
 }
 body {
+    font-family: Lato !important;
     max-width:100%;
     overflow-x:hidden;
 }

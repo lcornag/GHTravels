@@ -1,3 +1,127 @@
-<h1>{{message}}</h1>
-<h2 style="text-align: center">{{error.status}}</h2>
-<!--<pre>{{error.stack}}</pre> -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>GeeksHubs Travels</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
+    <link rel='stylesheet' href='/stylesheets/error404.css' />
+</head>
+<body>
+<section id="inicio" class="parallax--bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="error404 col text-center" id="status">
+                {{error.status}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="error404 col text-center" id="message">
+                {{error.message}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="takeMeBack col text-center" id="btnBack">
+                <button type="button" onclick="goHome()" class="btn btn-primary btn-lg">LLévame atrás</button>
+                <script>
+                    function goHome()
+                    {
+                        location.href = "/";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="row">
+        <div class="col">
+            <div class="footerTitle">¿Necesitas ayuda?</div>
+            <ul id="Ayuda">
+                <li>123456789</li>
+                <li><a href="mailto:">travel@geekstravels.com</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="footerTitle col">Información</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="linksAyuda">
+                        <li><a href="">Quienes somos</a></li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                        <li><a href="">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="linksAyuda">
+                        <li><a href="">Condiciones generales</a></li>
+                        <li><a href="">Aviso legal</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="footerTitle">Suscríbete a la newsletter</div>
+            <form action="">
+                <input type="email" placeholder="email" id="sendEmail">
+                <br>
+                <button class="btn btn-outline-light">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div id="footerRow" class="row">
+        <hr>
+        <div class="col">
+            <div  id="redesSociales">
+                <ul>
+                    <li class="nav-item">
+                        <div id="tw"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="wp"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="fb"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="ig"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="lk"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="yt"><a href=""></a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--
+    <ul id="redesSociales">
+            <li class="nav-item">
+                <a href=""><div id="tw"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="wp"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="fb"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="ig"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="lk"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="yt"></div></a>
+            </li>
+        </ul>-->
+</footer>
+<script src="../javascripts/parallaxInicio.js"></script>
+</body>
+</html>

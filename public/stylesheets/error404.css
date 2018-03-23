@@ -1,0 +1,21 @@
+*{
+    font-family: Lato !important;
+}
+#html{
+    overflow-y:scroll !important;
+}
+.row{
+    height: fit-content;
+}
+#status, #message{
+    text-align: center;
+    text-shadow: 1px 1px 10px black;
+    padding:0;
+}
+#status{
+    font-size: 30vh;
+}
+#message{
+    height: fit-content;
+    font-size: 10vh;
+}
