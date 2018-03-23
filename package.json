@@ -1,0 +1,32 @@
+{
+  "name": "fullWeb",
+  "version": "1.0.0",
+  "private": true,
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "hbs-utils": "0.0.4",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "browser-sync": "^2.23.6",
+    "expect": "^1.20.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "npm": "^5.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2",
+    "gulp-concat": "^2.6.1"
+  },
+  "autor": "Luca Cornaglia",
+  "license": "ISC"
+}

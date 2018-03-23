@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>GeeksHubs Travels</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
+</head>
+<body>
+<section id="navigationbar">
+    <nav class="navbar" id="fullNav">
+        <div class="dropdown" id="dropMobile">
+            <button class="btn btn-outline-light dropdown-toggle" type="button"
+                    data-toggle="dropdown" aria-expanded="false">
+                FAQ
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item anchorLinks" href="#destinos">Destinos</a>
+                <a class="dropdown-item anchorLinks" href="#nosotros">Quiénes somos</a>
+                <a class="dropdown-item anchorLinks" href="#mapa">Dónde estamos</a>
+            </div>
+        </div>
+        <a class="navbar-brand col" href="./index.html">
+            <div class="row">
+                <div class="col" id="logoImagen"></div>
+                <div class="col" id="logoTexto">GeeksHubs Travels</div>
+            </div>
+        </a>
+        <div class="nav-item col-6 text-center" id="navbarList">
+            <div class="row" id="anchorLinks">
+                <div class="col">
+                    <div class="anchorwrapper">
+                        <a class="nav-link" href="#destinos" id="anchor1">Destinos</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="anchorwrapper">
+                        <a class="nav-link" href="#nosotros" id="anchor2">Quiénes somos</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="anchorwrapper">
+                        <a class="nav-link" href="#mapa" id="anchor3">Dónde estamos</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <a class="nav-link" href="./register.html">Sign up</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <a class="nav-link" href="./login.html">Log in</a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+<section id="inicio" class="parallax--bg">
+    <div id="gridprincipal" class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <a id="viaja">VIAJA</a>
+            </div>
+        </div>
+        <div id="descubre" class="row">
+            <div class="col-12 text-center">
+                <a>Descubre lugares maravillosos con GeeksHubs Travels</a>
+            </div>
+        </div>
+        <div id="verDestinos" class="row text-center">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-primary btn-lg">Ver destinos</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="destinos">
+    <div class="carousel slide" id="carouselDestinos">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="destinoContainer">
+                    <div class="cadaDestino" id="destino1">
+                        <div class="dentroDestino">
+                            <div class="lugarDestino">
+                                <p>Finlandia</p>
+                            </div>
+                            <div class="precio">
+                                <p>desde 599€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="destinoContainer">
+                    <div class="cadaDestino" id="destino2">
+                        <div class="dentroDestino">
+                            <div class="lugarDestino">
+                                <p>Marruecos</p>
+                            </div>
+                            <div class="precio">
+                                <p>desde 270€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="destinoContainer">
+                    <div class="cadaDestino" id="destino3">
+                        <div class="dentroDestino">
+                            <div class="lugarDestino">
+                                <p>Nicaragua</p>
+                            </div>
+                            <div class="precio">
+                                <p>desde 820€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="destinoContainer">
+                    <div class="cadaDestino" id="destino4">
+                        <div class="dentroDestino">
+                            <div class="lugarDestino">
+                                <p>Peru</p>
+                            </div>
+                            <div class="precio">
+                                <p>desde 799€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="destinoContainer">
+                    <div class="cadaDestino" id="destino5">
+                        <div class="dentroDestino">
+                            <div class="lugarDestino">
+                                <p>Singapur</p>
+                            </div>
+                            <div class="precio">
+                                <p>desde 950€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="destinoContainer">
+                    <div class="cadaDestino" id="destino6">
+                        <div class="dentroDestino">
+                            <div class="lugarDestino">
+                                <p>Suiza</p>
+                            </div>
+                            <div class="precio">
+                                <p>desde 399€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselDestinos" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselDestinos" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+        <div class="container-fluid" id="contenedorTotalDestinos">
+        <div class="row">
+            {{# each ciudades}}
+                <div class="col">
+                    <div class="destinoContainer" href="#">
+                        <div class="destinoBackground" id="destino1" style="background-image: url('/images/destinos/{{name}}.jpg')"></div>
+                        <div class="destinoDescription row">
+                            <div class="lugar col-7">
+                                <p>{{name}}</p>
+                            </div>
+                            <div class="precioviaje col-5">
+                                <p>Desde €{{precio}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+            <!--
+            <div class="col">
+                <div class="destinoContainer">
+                    <div class="destinoBackground" id="destino1"></div>
+                    <div class="destinoDescription row">
+                        <div class="lugar col-7">
+                            <p>Finlandia</p>
+                        </div>
+                        <div class="precioviaje col-5">
+                            <p>Desde €399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="destinoContainer">
+                    <div class="destinoBackground" id="destino2"></div>
+                    <div class="destinoDescription row">
+                        <div class="lugar col-7">
+                            <p>Marruecos</p>
+                        </div>
+                        <div class="precioviaje col-5">
+                            <p>Desde €399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="destinoContainer">
+                    <div class="destinoBackground" id="destino3"></div>
+                    <div class="destinoDescription row">
+                        <div class="lugar col-7">
+                            <p>Nicaragua</p>
+                        </div>
+                        <div class="precioviaje col-5">
+                            <p>Desde €399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+                <div class="destinoContainer">
+                    <div class="destinoBackground" id="destino4"></div>
+                    <div class="destinoDescription row">
+                        <div class="lugar col-7">
+                            <p>Perú</p>
+                        </div>
+                        <div class="precioviaje col-5">
+                            <p>Desde €399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="destinoContainer">
+                    <div class="destinoBackground" id="destino5"></div>
+                    <div class="destinoDescription row">
+                        <div class="lugar col-7">
+                            <p>Singapur</p>
+                        </div>
+                        <div class="precioviaje col-5">
+                            <p>Desde €399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="destinoContainer">
+                    <div class="destinoBackground" id="destino6"></div>
+                    <div class="destinoDescription row">
+                        <div class="lugar col-7">
+                            <p>Suiza</p>
+                        </div>
+                        <div class="precioviaje col-5">
+                            <p>Desde €399</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+</section>
+<section id="nosotros">
+    <div class="row" id="rowNos">
+        <div class="col">
+            <div id="presentacion">
+                <h2>GeeksHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros entusiasta que deciden hacer de
+                    su pasión por conocer el mundo un modo de vida.
+                    <br>
+                    Desde nuestros inicios hemos diseñado mas de 500 viajes organizados
+                    a diferentes destinos de Europa, Norteamérica y Asia. Nuestro objetivo ahora es ir ampliando horizontes poco a poco.
+                </h2>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div id="mapa">
+                    <iframe frameborder="1"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.4500517172332!2d-0.3581286858955122!3d39.48175111989444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604898947abad3%3A0x5aae0e0b7fa0358a!2sGeeksHubs+Space+Valencia!5e0!3m2!1ses!2ses!4v1519747880891">
+                    </iframe>
+                </div>
+            </div>
+            <div class="row">
+                <section id="contacto">
+                    <div class="wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div id="datosContacto" class="col">
+                                    <div>
+                                        <p>Email: <a href="mailto:travel@geekstravels.com">travel@geekstravels.com</a>
+                                            <br>
+                                            <br>
+                                            Llámanos o manda un email cuando quieras, intentaremos responderte antes de 24 horas en días laborables.
+                                            <br>
+                                            Abrimos de lunes a viernes 10:00 a 14:00 y de 17:00 a 21:00. Los sábados puedes encontrarnos de
+                                            10:00 a 14:00
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="formulario" class="col">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="text" placeholder="Nombre">
+                                            </div>
+                                            <div class="col">
+                                                <input type="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="text" placeholder="Teléfono">
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" placeholder="País">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <textarea title="areaForm" class="form-control" cols="60" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-outline-secondary" id="enviarForm">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div id="btnToTop">
+        <div>
+                <span id="arrow">
+                    🡱
+                </span>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="row">
+        <div class="col">
+            <div class="footerTitle">¿Necesitas ayuda?</div>
+            <ul id="Ayuda">
+                <li>123456789</li>
+                <li><a href="mailto:">travel@geekstravels.com</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="footerTitle col">Información</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="linksAyuda">
+                        <li><a href="">Quienes somos</a></li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                        <li><a href="">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="linksAyuda">
+                        <li><a href="">Condiciones generales</a></li>
+                        <li><a href="">Aviso legal</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="footerTitle">Suscríbete a la newsletter</div>
+            <form action="">
+                <input type="email" placeholder="email" id="sendEmail">
+                <br>
+                <button class="btn btn-outline-light">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div id="footerRow" class="row">
+        <hr>
+        <div class="col">
+            <div  id="redesSociales">
+                <ul>
+                    <li class="nav-item">
+                        <div id="tw"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="wp"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="fb"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="ig"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="lk"><a href=""></a></div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="yt"><a href=""></a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--
+    <ul id="redesSociales">
+            <li class="nav-item">
+                <a href=""><div id="tw"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="wp"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="fb"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="ig"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="lk"></div></a>
+            </li>
+            <li class="nav-item">
+                <a href=""><div id="yt"></div></a>
+            </li>
+        </ul>-->
+</footer>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../javascripts/main.js"></script>
+<script src="../javascripts/parallaxInicio.js"></script>
+</body>
+</html>

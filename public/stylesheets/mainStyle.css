@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+@media (min-width: 400px) {
+    #divQuienes {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (min-width: 992px) {
+    #divQuienes {
+        width: 35%;
+        left: 30px;
+        transform: none;
+    }
+}
+@media (min-width: 768px) {
+    #divQuienes {
+        width: 50%;
+        left: 30px;
+        transform: none;
+    }
+}
+#contenedorTotalDestinos{
+    margin-top:10vh;
+    width:70%;
+}
+.destinoContainer{
+    width:40vh;
+    height:fit-content;
+    margin-bottom: 10vh;
+}
+.destinoContainer:hover{
+    cursor:pointer;
+}
+.destinoContainer:hover .destinoDescription{
+    background-color: rgba(52,58,64, 1);
+    color: rgb(255,255,255);
+}
+.destinoBackground{
+    background-size: cover;
+    width:inherit;
+    height:30vh;
+    border-top-right-radius:1vh;
+    border-top-left-radius:1vh;
+}
+.destinoBackground:hover{
+    border-top-right-radius: 1vh;
+    border-top-left-radius: 1vh;
+}
+.destinoDescription{
+    border:1px solid black;
+    width: 100%;
+    height:fit-content;
+    margin:0.5vh 0 0 0;
+}
+.lugar, .precioviaje{
+    padding: 0 1vh 0 1vh;
+    margin-top: 2vh;
+    text-align: left;
+    height:fit-content;
+    font-family: Lato;
+    font-size: 20px;
+}
+.lugar{
+    letter-spacing: 2px;
+}
+.precioviaje{
+    text-align: right;
+}
+body {
+    max-width:100%;
+    overflow-x:hidden;
+}
+#navigationbar{
+    position:fixed;
+    z-index:1000;
+    width:100%;
+    display: block;
+    height:fit-content;
+    padding:0;
+}
+.nav-link{
+    transition: background-color 0.5s;
+}
+.nav-link:hover{
+    color:white;
+    background-color: rgba(0,0,0,0.3);
+}
+.dropdown-menu{
+    right:0;
+    left:auto !important;
+}
+.navbar * {
+    color:white;
+    list-style-type: none;
+}
+.navbar{
+    height: 40px;
+    background-color:rgba(255,255,255,0);
+}
+.navbar-brand{
+    background-image: url("../images/66.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:fit-content;
+    height:fit-content;
+    margin:0;
+    padding:0;
+}
+.navbar-brand *{
+    float: left;
+}
+#navbarList{
+    float:left;
+}
+#logoTexto{
+    margin-left:40px;
+}
+#navbarList a{
+    white-space: nowrap;
+}
+
+@media (min-width:900px){
+    #dropMobile {
+        display: none;
+    }
+    #carouselDestinos{
+        display: none;
+    }
+}
+@media screen and (max-width:900px){
+    #inicio{
+        background-position: top;
+    }
+    #fullLogo li{
+        width:50px;
+    }
+    #fullLogo a{
+        visibility: collapse;
+    }
+    .d-flex .p-2{
+        max-width:200px;
+    }
+    #navbarList{
+        display:none;
+    }
+    #redesSociales{
+        display:none;
+        margin-right:0;
+    }
+    #viaja{
+        font-size: 80px !important;
+        margin:0 !important;
+    }
+    #descubre {
+        font-size: 18px;
+        text-align: center;
+    }
+    #contenedorTotalDestinos{
+        display: none;
+    }
+    .carousel-control-next-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+    .carousel-control-prev-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+    }
+    .destinoContainer .cadaDestino{
+        width:100% !important;
+        height: fit-content !important;
+        background-position: center !important;
+        background-repeat: no-repeat;
+    }
+    .dentroDestino .lugarDestino{
+        border-radius: 0 !important;
+    }
+    #divCita{
+        top:0 !important;
+        left:0 !important;
+        font-size: 10px !important;
+    }
+    #nosotros{
+        height:fit-content !important;
+    }
+    #btnToTop{
+        display: none;
+    }
+
+}
+
+#redesSociales li {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    margin-left: 10px;
+    float:left;
+    margin-top:3px;
+}
+#redesSociales li:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+#redesSociales div{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:30px;
+    width:30px;
+}
+#redesSociales{
+    display: inline-block;
+    text-align: center;
+}
+#redesSociales #tw{
+    background-image: url("../images/icons/twitter_icon.png");
+}
+#redesSociales #wp{
+    background-image: url("../images/icons/whatsapp_icon.png");
+}
+#redesSociales #fb{
+    background-image: url("../images/icons/facebook_icon.png");
+}
+#redesSociales #ig{
+    background-image: url("../images/icons/instagram_icon.png");
+}
+#redesSociales #lk{
+    background-image: url("../images/icons/linkedin_icon.png");
+}
+#redesSociales #yt{
+    background-image: url("../images/icons/youtube_icon.png");
+}
+#inicio{
+    background-image: url("../images/bgs/cityBG.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Lato';
+    padding-top: 56px;
+    color: white;
+}
+#gridprincipal{
+    margin-top:30vh;
+}
+#gridprincipal a{
+    background-color: rgba(0,0,0,0.5);
+    display: inline-block;
+    width:fit-content;
+    padding: 0 15px;
+    margin: 0 0 5px 0;
+    font-weight: lighter;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 100;
+}
+#gridprincipal #viaja{
+    font-size: 40px;
+}
+#gridprincipal #descubre {
+    font-size: 30px;
+}
+#verDestinos{
+    margin-top: 10vh;
+}
+#contenedorTotalDestinos .col{
+    display: flex;
+    justify-content: center;
+}
+#nosotros{
+    background-attachment: fixed;
+    height: 70vh;
+    background-image: url("../images/bgs/purpleSky.jpg");
+    background-size: cover;
+}
+#rowNos{
+    width:100%;
+}
+#presentacion{
+    float:left;
+    margin:10vh 0 0 10vh;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,0.3);
+    height:50vh;
+    width:40vh;
+}
+#presentacion h2{
+    color:white;
+    text-align: justify;
+    margin:5vh;
+    font-family: Lato;
+    font-size: 2.2vh;
+}
+#mapa{
+    width:100%;
+    margin:10vh 10vh 0 0;
+}
+#mapa iframe{
+    width:100%;
+    height:100%;
+}
+#contacto{
+    width:100%;
+}
+#formulario{
+    width:100%;
+    padding-right: 0;
+}
+#formulario form input{
+    margin-bottom: 10px !important;
+    background-color: rgba(0,0,0,0.3);
+}
+#formulario form input::placeholder{
+    font-family: Lato;
+    font-weight: lighter;
+    color:white;
+}
+#formulario textarea{
+    background: rgba(0,0,0,0.3);
+}
+footer{
+    width:100%;
+    background-color: black;
+    padding-top: 10px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+footer .row{
+    width:100%;
+    margin:0;
+    text-align: center;
+}
+footer ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+footer ul li a{
+    color:white;
+}
+.footerTitle {
+    font-size: 2vh;
+    margin:0;
+}
+.linksAyuda{
+    margin-left:7vh;
+}
+.linksAyuda li{
+    text-align: left !important;
+    width:fit-content;
+}
+a{
+    text-decoration: none !important;
+}
+
+#textoAyuda {
+    color: #646464;
+    font-weight: bold;
+}
+#contacto .wrapper {
+    margin:5vh 10vh 0 0;
+}
+#datosContacto{
+    color:white;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+#datosContacto p {
+    font-family: 'Lato', sans-serif;
+}
+#enviarForm{
+    width:100%;
+    color:black !important;
+}
+#enviarForm:hover{
+    color:white !important;
+}
+#footerRow{
+    border-top: solid 1px white;
+    height:fit-content;
+    margin-top:2vh;
+    text-align: center !important;
+}
+form button {
+    margin-top: 15px;
+    width:40%;
+}
+footer input {
+    background-color: rgba(0,0,0,0.5);
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: solid 1.5px white;
+    color: white;
+    padding: 0px 5px;
+}
+#contacto textarea {
+    border: transparent;
+}
+#contacto input {
+    background-color: rgba(255,255,255,0.8);
+    border: transparent;
+    padding: 0px 5px;
+    width: 100%;
+}
+footer input::placeholder {
+    color: white;
+    opacity: 1;
+}
+footer form{
+    text-align: center;
+}
+footer #sendEmail{
+    text-align: left;
+}
+footer button:hover{
+    color: black !important;
+}
+*:focus{
+    outline: none !important;
+}
+#contacto button {
+    border: solid 2px white;
+    color:#747474;
+}
+#contacto button:hover {
+    background-color:black;
+    color: white;
+}
+#contacto input {
+    border-radius: 5px;
+}
+#btnToTop {
+    position:fixed;
+    bottom: 5vh;
+    right: 15px;
+    z-index: 1;
+}
+#btnToTop div{
+    color:purple;
+    align-items: center;
+    font-size: 5vh;
+    visibility: hidden;
+}
+#btnToTop div span:hover{
+    cursor:pointer;
+    color:gray;
+}

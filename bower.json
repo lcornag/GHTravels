@@ -1,0 +1,19 @@
+{
+  "name": "fullWeb",
+  "homepage": "",
+  "authors": [
+    "Luca Cornaglia <lcornag@gmail.com>"
+  ],
+  "description": "Página web",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1"
+  }
+}

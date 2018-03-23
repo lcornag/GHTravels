@@ -1,0 +1,9 @@
+/idea
+/bower_components
+/node_modules
+/public/bower_components
+/assets/estilos.min.css
+/assets/main.min.js
+/Vagrantfile
+/.vagrant
+/.idea
