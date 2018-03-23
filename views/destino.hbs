@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>GeeksHubs Travels</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
+    <link rel='stylesheet' href='/stylesheets/destino.css' />
+</head>
+<body>
+    <section id="navigationbar">
+        <nav class="navbar" id="fullNav">
+            <a class="navbar-brand col" href="/">
+                <div class="row">
+                    <div class="col" id="logoImagen"></div>
+                    <div class="col" id="logoTexto">GeeksHubs Travels</div>
+                </div>
+            </a>
+            <div class="nav-item col-6 text-center" id="navbarList">
+                <div class="row" id="anchorLinks">
+                    <div class="col">
+                        <div class="anchorwrapper">
+                            <a class="nav-link" href="/#destinos" id="anchor1">Destinos</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="anchorwrapper">
+                            <a class="nav-link" href="#nosotros" id="anchor2">Quiénes somos</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="anchorwrapper">
+                            <a class="nav-link" href="#mapa" id="anchor3">Dónde estamos</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <a class="nav-link text-right" href="./register.html">Sign up</a>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link text-left" href="./login.html">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="inicio" class="parallax--bg">
+        <div id="destinoCarousel" class="carousel slide" data-ride="carousel">
+            <!--Indicadores-->
+            <ul class="carousel-indicators">
+                <li data-target="#destinoCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#destinoCarousel" data-slide-to="1" ></li>
+                <li data-target="#destinoCarousel" data-slide-to="2" ></li>
+            </ul>
+            <!--slideshow-->
+            <div class="carousel-inner">
+                <div class="carousel-item active" id="destinoBG" style="background-image: url('/images/destinosCarousel/finland1.jpg')">
+                </div>
+                <div class="carousel-item" id="destinoBG" style="background-image: url('/images/destinosCarousel/finland2.jpg')">
+                </div>
+                <div class="carousel-item" id="destinoBG" style="background-image: url('/images/destinosCarousel/finland3.jpg')">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <div class="footerTitle">¿Necesitas ayuda?</div>
+                <ul id="Ayuda">
+                    <li>123456789</li>
+                    <li><a href="mailto:">travel@geekstravels.com</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="footerTitle col">Información</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul class="linksAyuda">
+                            <li><a href="">Quienes somos</a></li>
+                            <li><a href="">Preguntas frecuentes</a></li>
+                            <li><a href="">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="linksAyuda">
+                            <li><a href="">Condiciones generales</a></li>
+                            <li><a href="">Aviso legal</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="footerTitle">Suscríbete a la newsletter</div>
+                <form action="">
+                    <input type="email" placeholder="email" id="sendEmail">
+                    <br>
+                    <button class="btn btn-outline-light">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div id="footerRow" class="row">
+            <hr>
+            <div class="col">
+                <div  id="redesSociales">
+                    <ul>
+                        <li class="nav-item">
+                            <div id="tw"><a href=""></a></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="wp"><a href=""></a></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="fb"><a href=""></a></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="ig"><a href=""></a></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="lk"><a href=""></a></div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="yt"><a href=""></a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--
+        <ul id="redesSociales">
+                <li class="nav-item">
+                    <a href=""><div id="tw"></div></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""><div id="wp"></div></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""><div id="fb"></div></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""><div id="ig"></div></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""><div id="lk"></div></a>
+                </li>
+                <li class="nav-item">
+                    <a href=""><div id="yt"></div></a>
+                </li>
+            </ul>-->
+    </footer>
+
+
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../javascripts/main.js"></script>
+    <script src="../javascripts/parallaxInicio.js"></script>
+</body>
+</html>

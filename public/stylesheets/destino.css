@@ -1,0 +1,14 @@
+#destinoBG{
+    width:80vh;
+    height:50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/destinos/finland.jpg");
+
+}
+#destinoCarousel{
+    margin:10vh 0 0 10vh;
+    width:fit-content;
+    box-shadow: 3px 3px 3px black;
+}

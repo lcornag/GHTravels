@@ -16,12 +16,12 @@
                 FAQ
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item anchorLinks" href="#destinos">Destinos</a>
+                <a class="dropdown-item anchorLinks" href="destinos">Destinos</a>
                 <a class="dropdown-item anchorLinks" href="#nosotros">Quiénes somos</a>
                 <a class="dropdown-item anchorLinks" href="#mapa">Dónde estamos</a>
             </div>
         </div>
-        <a class="navbar-brand col" href="./index.html">
+        <a class="navbar-brand col" href="/">
             <div class="row">
                 <div class="col" id="logoImagen"></div>
                 <div class="col" id="logoTexto">GeeksHubs Travels</div>
@@ -177,7 +177,7 @@
         <div class="row">
             {{# each ciudades}}
                 <div class="col">
-                    <div class="destinoContainer" href="#">
+                    <div class="destinoContainer" onclick="goDestino()">
                         <div class="destinoBackground" id="destino1" style="background-image: url('/images/destinos/{{name}}.jpg')"></div>
                         <div class="destinoDescription row">
                             <div class="lugar col-7">
@@ -187,6 +187,11 @@
                                 <p>Desde €{{precio}}</p>
                             </div>
                         </div>
+                        <script>
+                            function goDestino(){
+                                location.href = '/destino';
+                            }
+                        </script>
                     </div>
                 </div>
             {{/each}}
