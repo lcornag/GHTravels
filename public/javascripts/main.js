@@ -10,7 +10,6 @@ $("#btnToTop div").on("click", function(){
 
 //scroll event
 $(window).on("scroll",function(){
-    console.log($(window).scrollTop());
     if($(window).scrollTop() > 200){
         $("#btnToTop div").css("visibility", "visible");
     }else{
@@ -26,4 +25,11 @@ function divTransparency() {
     var scrollTop = $(this).scrollTop();
     var tValue = (scrollTop * 3) / 1000;
     $('.navbar').css("background-color", "rgba(52,58,64," + tValue + ")")
+}
+
+function goDestino(name){
+    location.href = '/destino/'+ name;
+}
+function regLog(reglog){
+    location.href = '/' + reglog;
 }

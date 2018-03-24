@@ -47,10 +47,10 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <a class="nav-link text-right" href="./register.html">Sign up</a>
+                            <a class="nav-link text-right" onclick="regLog('signup.hbs')">Sign up</a>
                         </div>
                         <div class="col">
-                            <a class="nav-link text-left" href="./login.html">Log in</a>
+                            <a class="nav-link text-left" onclick="regLog('login')">Log in</a>
                         </div>
                     </div>
                 </div>
@@ -177,8 +177,8 @@
         <div class="row">
             {{# each ciudades}}
                 <div class="col">
-                    <div class="destinoContainer" onclick="goDestino()">
-                        <div class="destinoBackground" id="destino1" style="background-image: url('/images/destinos/{{name}}.jpg')"></div>
+                    <div class="destinoContainer" onclick="goDestino('{{name}}')">
+                        <div class="destinoBackground" id="destino1" style="background-image: url('/images/destinos/{{name}}1.jpg')"></div>
                         <div class="destinoDescription row">
                             <div class="lugar col-7">
                                 <p>{{name}}</p>
@@ -187,11 +187,6 @@
                                 <p>Desde €{{precio}}</p>
                             </div>
                         </div>
-                        <script>
-                            function goDestino(){
-                                location.href = '/destino';
-                            }
-                        </script>
                     </div>
                 </div>
             {{/each}}

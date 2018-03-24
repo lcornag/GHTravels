@@ -1,14 +1,45 @@
 #destinoBG{
-    width:80vh;
-    height:50vh;
+    width:100%;
+    height:100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/destinos/finland.jpg");
-
 }
 #destinoCarousel{
-    margin:10vh 0 0 10vh;
-    width:fit-content;
+    margin-top:1vh;
+    max-width:70vh;
+    height:100%;
     box-shadow: 3px 3px 3px black;
+}
+#colCarousel{
+    padding-left:0;
+}
+.carousel-inner{
+    width:100%;
+    height:100%;
+}
+#nombreDestino{
+    width:fit-content;
+    height:fit-content;
+    font-size: 15vh;
+    margin-top: 5vh;
+    margin-right:0;
+    text-shadow: 3px 3px 3px black;
+    background-color: rgba(0,0,0,0.3);
+}
+#nombreDestino p{
+    width:fit-content;
+    margin:0;
+    line-height: 1em;
+    padding-bottom:20px;
+}
+#descripcionSitio{
+    width:100%;
+    height:50vh;
+    margin:1vh 10vh 0 0;
+    border:1px solid rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
+}
+#descripcionSitio p{
+    font-size: 2vh;
 }

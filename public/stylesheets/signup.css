@@ -1,0 +1,48 @@
+#inicio{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#registerCard{
+    height:fit-content;
+    width:60vh;
+    background-color: rgba(0,0,0,0.5);
+    margin-top:20vh;
+    padding:0;
+    border:1px solid black;
+}
+#registerCard h1, p{
+    margin:1vh 0 0 1vh;
+}
+#hr hr{
+    background-color: rgba(0,0,0,0.5);
+    height:1px;
+}
+label{
+    margin:0 0 0 1vh;
+    padding-bottom: 5px;
+}
+input[type=text], input[type=password] {
+    width:58vh;
+    margin:0 0 2vh 1vh;
+    padding:8px 5px;
+    display: block;
+    border: none;
+    background: white;
+}
+.clearfix .row{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+.clearfix button {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    height:4vh;
+    margin:0;
+}
+.clearfix button:hover {
+    border: solid 2px white;
+    background:white;
+    color:black;
+    cursor: pointer;
+}

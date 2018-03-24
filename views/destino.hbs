@@ -40,7 +40,7 @@
                                 <a class="nav-link text-right" href="./register.html">Sign up</a>
                             </div>
                             <div class="col">
-                                <a class="nav-link text-left" href="./login.html">Log in</a>
+                                <a class="nav-link text-left" href="./login">Log in</a>
                             </div>
                         </div>
                     </div>
@@ -49,20 +49,45 @@
         </nav>
     </section>
     <section id="inicio" class="parallax--bg">
-        <div id="destinoCarousel" class="carousel slide" data-ride="carousel">
-            <!--Indicadores-->
-            <ul class="carousel-indicators">
-                <li data-target="#destinoCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#destinoCarousel" data-slide-to="1" ></li>
-                <li data-target="#destinoCarousel" data-slide-to="2" ></li>
-            </ul>
-            <!--slideshow-->
-            <div class="carousel-inner">
-                <div class="carousel-item active" id="destinoBG" style="background-image: url('/images/destinosCarousel/finland1.jpg')">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11" id="nombreDestino">
+                        <p> {{id}} </p>
                 </div>
-                <div class="carousel-item" id="destinoBG" style="background-image: url('/images/destinosCarousel/finland2.jpg')">
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col" id="colCarousel">
+                    <div id="destinoCarousel" class="carousel slide" data-ride="carousel">
+                        <!--Indicadores-->
+                        <ul class="carousel-indicators">
+                            <li data-target="#destinoCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#destinoCarousel" data-slide-to="1" ></li>
+                            <li data-target="#destinoCarousel" data-slide-to="2" ></li>
+                        </ul>
+                        <!--slideshow-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" id="destinoBG" style="background-image: url('/images/destinos/{{id}}1.jpg')">
+                            </div>
+                            <div class="carousel-item" id="destinoBG" style="background-image: url('/images/destinos/{{id}}2.jpg')">
+                            </div>
+                            <div class="carousel-item" id="destinoBG" style="background-image: url('/images/destinos/{{id}}3.jpg')">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item" id="destinoBG" style="background-image: url('/images/destinosCarousel/finland3.jpg')">
+                <div class="col-6">
+                    <div id="descripcionSitio">
+                        <p>sample text sample text sample text sample text sample text sample text
+                            sample text sample text sample text sample text sample text sample text
+                            sample text sample text sample text sample text sample text sample text
+                            sample text sample text sample text sample text sample text sample text
+                            sample text sample text sample text sample text sample text sample text
+                            sample text sample text sample text sample text sample text sample text
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,8 +182,8 @@
     </footer>
 
 
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../javascripts/main.js"></script>
     <script src="../javascripts/parallaxInicio.js"></script>
 </body>
