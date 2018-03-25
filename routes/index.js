@@ -16,14 +16,16 @@ router.get('/', function(req, res, next) {
           layout:false
   });
 });
-router.get('/login', (req,res,next)=>{
-    res.render('login',{
-        title:'Log in',
-        layout:'layout'
-    });
-});
 router.get('/destino/:id', function(req, res) {
-    res.render('destino',{ id:req.params.id });
+    res.render('destino',
+        { id:req.params.id,
+        layout:false
+        });
 });
-
+router.get('/register', (req,res)=>{
+    res.render('register')
+});
+router.get('/login', (req,res)=>{
+    res.render('login')
+});
 module.exports = router;

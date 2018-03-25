@@ -10,17 +10,6 @@
 <body>
 <section id="navigationbar">
     <nav class="navbar" id="fullNav">
-        <div class="dropdown" id="dropMobile">
-            <button class="btn btn-outline-light dropdown-toggle" type="button"
-                    data-toggle="dropdown" aria-expanded="false">
-                FAQ
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item anchorLinks" href="destinos">Destinos</a>
-                <a class="dropdown-item anchorLinks" href="#nosotros">Quiénes somos</a>
-                <a class="dropdown-item anchorLinks" href="#mapa">Dónde estamos</a>
-            </div>
-        </div>
         <a class="navbar-brand col" href="/">
             <div class="row">
                 <div class="col" id="logoImagen"></div>
@@ -47,10 +36,10 @@
                 <div class="col">
                     <div class="row">
                         <div class="col">
-                            <a class="nav-link text-right" onclick="regLog('signup.hbs')">Sign up</a>
+                            <a class="nav-link text-right" href="/register">Sign up</a>
                         </div>
                         <div class="col">
-                            <a class="nav-link text-left" onclick="regLog('login')">Log in</a>
+                            <a class="nav-link text-left" href="/login"">Log in</a>
                         </div>
                     </div>
                 </div>
@@ -78,101 +67,6 @@
     </div>
 </section>
 <section id="destinos">
-    <div class="carousel slide" id="carouselDestinos">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="destinoContainer">
-                    <div class="cadaDestino" id="destino1">
-                        <div class="dentroDestino">
-                            <div class="lugarDestino">
-                                <p>Finlandia</p>
-                            </div>
-                            <div class="precio">
-                                <p>desde 599€</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="destinoContainer">
-                    <div class="cadaDestino" id="destino2">
-                        <div class="dentroDestino">
-                            <div class="lugarDestino">
-                                <p>Marruecos</p>
-                            </div>
-                            <div class="precio">
-                                <p>desde 270€</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="destinoContainer">
-                    <div class="cadaDestino" id="destino3">
-                        <div class="dentroDestino">
-                            <div class="lugarDestino">
-                                <p>Nicaragua</p>
-                            </div>
-                            <div class="precio">
-                                <p>desde 820€</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="destinoContainer">
-                    <div class="cadaDestino" id="destino4">
-                        <div class="dentroDestino">
-                            <div class="lugarDestino">
-                                <p>Peru</p>
-                            </div>
-                            <div class="precio">
-                                <p>desde 799€</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="destinoContainer">
-                    <div class="cadaDestino" id="destino5">
-                        <div class="dentroDestino">
-                            <div class="lugarDestino">
-                                <p>Singapur</p>
-                            </div>
-                            <div class="precio">
-                                <p>desde 950€</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="destinoContainer">
-                    <div class="cadaDestino" id="destino6">
-                        <div class="dentroDestino">
-                            <div class="lugarDestino">
-                                <p>Suiza</p>
-                            </div>
-                            <div class="precio">
-                                <p>desde 399€</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a class="carousel-control-prev" href="#carouselDestinos" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselDestinos" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-    </div>
         <div class="container-fluid" id="contenedorTotalDestinos">
         <div class="row">
             {{# each ciudades}}
@@ -190,87 +84,6 @@
                     </div>
                 </div>
             {{/each}}
-            <!--
-            <div class="col">
-                <div class="destinoContainer">
-                    <div class="destinoBackground" id="destino1"></div>
-                    <div class="destinoDescription row">
-                        <div class="lugar col-7">
-                            <p>Finlandia</p>
-                        </div>
-                        <div class="precioviaje col-5">
-                            <p>Desde €399</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="destinoContainer">
-                    <div class="destinoBackground" id="destino2"></div>
-                    <div class="destinoDescription row">
-                        <div class="lugar col-7">
-                            <p>Marruecos</p>
-                        </div>
-                        <div class="precioviaje col-5">
-                            <p>Desde €399</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="destinoContainer">
-                    <div class="destinoBackground" id="destino3"></div>
-                    <div class="destinoDescription row">
-                        <div class="lugar col-7">
-                            <p>Nicaragua</p>
-                        </div>
-                        <div class="precioviaje col-5">
-                            <p>Desde €399</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col">
-                <div class="destinoContainer">
-                    <div class="destinoBackground" id="destino4"></div>
-                    <div class="destinoDescription row">
-                        <div class="lugar col-7">
-                            <p>Perú</p>
-                        </div>
-                        <div class="precioviaje col-5">
-                            <p>Desde €399</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="destinoContainer">
-                    <div class="destinoBackground" id="destino5"></div>
-                    <div class="destinoDescription row">
-                        <div class="lugar col-7">
-                            <p>Singapur</p>
-                        </div>
-                        <div class="precioviaje col-5">
-                            <p>Desde €399</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="destinoContainer">
-                    <div class="destinoBackground" id="destino6"></div>
-                    <div class="destinoDescription row">
-                        <div class="lugar col-7">
-                            <p>Suiza</p>
-                        </div>
-                        <div class="precioviaje col-5">
-                            <p>Desde €399</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
         </div>
     </div>
 </section>

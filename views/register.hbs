@@ -8,66 +8,76 @@
     <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
 </head>
 <body>
-    <section id="navigationbar">
-        <nav class="navbar" id="fullNav">
-            <a class="navbar-brand col" href="/">
-                <div class="row">
-                    <div class="col" id="logoImagen"></div>
-                    <div class="col" id="logoTexto">GeeksHubs Travels</div>
+<section id="navigationbar">
+    <nav class="navbar" id="fullNav">
+        <a class="navbar-brand col" href="/">
+            <div class="row">
+                <div class="col" id="logoImagen"></div>
+                <div class="col" id="logoTexto">GeeksHubs Travels</div>
+            </div>
+        </a>
+        <div class="nav-item col-6 text-center" id="navbarList">
+            <div class="row" id="anchorLinks">
+                <div class="col">
+                    <div class="anchorwrapper">
+                        <a class="nav-link" href="#destinos" id="anchor1">Destinos</a>
+                    </div>
                 </div>
-            </a>
-            <div class="nav-item col-6 text-center" id="navbarList">
-                <div class="row" id="anchorLinks">
-                    <div class="col">
-                        <div class="anchorwrapper">
-                            <a class="nav-link" href="#destinos" id="anchor1">Destinos</a>
-                        </div>
+                <div class="col">
+                    <div class="anchorwrapper">
+                        <a class="nav-link" href="#nosotros" id="anchor2">Quiénes somos</a>
                     </div>
-                    <div class="col">
-                        <div class="anchorwrapper">
-                            <a class="nav-link" href="#nosotros" id="anchor2">Quiénes somos</a>
-                        </div>
+                </div>
+                <div class="col">
+                    <div class="anchorwrapper">
+                        <a class="nav-link" href="#mapa" id="anchor3">Dónde estamos</a>
                     </div>
-                    <div class="col">
-                        <div class="anchorwrapper">
-                            <a class="nav-link" href="#mapa" id="anchor3">Dónde estamos</a>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <a class="nav-link text-right" href="/register">Sign up</a>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <a class="nav-link text-right" href="/register">Sign up</a>
-                            </div>
-                            <div class="col">
-                                <a class="nav-link text-left" href="/login">Log in</a>
-                            </div>
+                        <div class="col">
+                            <a class="nav-link text-left" href="/login"">Log in</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </section>
+        </div>
+    </nav>
+</section>
     <section id="inicio" class="parallax--bg">
         <div id="gridprincipal" class="container-fluid">
             <link rel='stylesheet' href='/stylesheets/signup.css'/>
             <form action="" id="signUp">
                 <div id="registerCard" class="container-fluid">
-                    <h1>Accede con tu cuenta</h1>
+                    <h1>Regístrate</h1>
+                    <p>Rellena los campos para crearte una cuenta</p>
                     <div id="hr"><hr></div>
 
-                    <label for="usernameT"><b>Nombre de usuario</b></label>
-                    <input type="text" placeholder="UserN" name="userName" id="saveUsername"required>
+                    <label for="username"><b>Nombre de usuario</b></label>
+                    <input type="text" placeholder="Usuario" name="username" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="ejemplo@ejemplo.com" name="email" required>
 
                     <label for="psw"><b>Contraseña</b></label>
                     <input type="password" placeholder="Introducir contraseña" name="psw" required>
 
+                    <label for="psw-repeat"><b>Repetir contraseña</b></label>
+                    <input type="password" placeholder="Reintroducir contraseña" name="psw-repeat" required>
+
                     <label>
                         <input type="checkbox" checked="checked" name="rememberMe" style="margin-bottom:15px"> Remember me
                     </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
                     <div class="clearfix">
                         <div class="row">
-                            <a href="#"><p>Olvidé mi contraseña</p></a>
-                            <button onclick="guardarData()" id="loginbtn" value="loginbtn" type="button" class="signupbtn col">Entrar </button>
+                            <button type="button" class="cancelbtn col">Cancel</button>
+                            <button type="submit" class="signupbtn col">Sign Up</button>
                         </div>
                     </div>
                 </div>

@@ -74,6 +74,11 @@ body {
     max-width:100%;
     overflow-x:hidden;
 }
+#divUser{
+    text-align: center;
+    height:fit-content;
+    font-size: 200px;
+}
 #navigationbar{
     position:fixed;
     z-index:1000;

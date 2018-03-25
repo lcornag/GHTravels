@@ -17,6 +17,8 @@ $(window).on("scroll",function(){
     }
 });
 
+
+
 //header opacity
 $(window).scroll(function() {
     divTransparency();
@@ -30,6 +32,18 @@ function divTransparency() {
 function goDestino(name){
     location.href = '/destino/'+ name;
 }
-function regLog(reglog){
-    location.href = '/' + reglog;
+
+function relocateHome(){
+    location.href="/";
+}
+
+function guardarData(){
+    var userName = document.getElementById("saveUsername");
+    localStorage.setItem("loginbtn", userName.value);
+    var valGuardado = localStorage.getItem("loginbtn");
+
+    relocateHome();
+
+   // var usuario = document.getElementById("usuario");
+   // usuario.value = valGuardado;
 }
