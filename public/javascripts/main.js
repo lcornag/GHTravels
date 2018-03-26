@@ -38,10 +38,5 @@ function relocateHome(){
 function guardarData(){
     var userName = document.getElementById("saveUsername");
     localStorage.setItem("loginbtn", userName.value);
-    var valGuardado = localStorage.getItem("loginbtn");
-
     relocateHome();
-
-   // var usuario = document.getElementById("usuario");
-   // usuario.value = valGuardado;
 }
