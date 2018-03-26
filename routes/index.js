@@ -16,9 +16,15 @@ router.get('/', function(req, res, next) {
       res.render('mainPage', {
           title: 'Geekshubs Travels',
           layout:false,
-          ciudades: ciudades
+          ciudades: ciudades,
+          reglog: [
+              {register: 'signup'},
+              {login: 'login'}
+          ]
   });
 });
+
+
 function listaCiudades(ciudades){
     var arrayCiudades = Array();
     for(var i = 0;i < ciudades.length; i++){
@@ -47,11 +53,23 @@ router.get('/destino/:id', function(req, res,next) {
     }
 });
 
-router.get('/register', (req,res)=>{
-    res.render('register')
+router.get('/:reglog', function(req,res,next){
+   if(req.params.reglog === 'login'){
+       res.render('login');
+   }else if(req.params.reglog === 'register'){
+       res.render('register');
+   }else{
+       // mainpage 404 handler
+       next(createError(404));
+       app.use(function(err, req, res, next) {
+           res.locals.message = err.message;
+           res.locals.error = req.app.get('env') === 'development' ? err : {};
+           // render the error page
+           res.status(err.status || 500);
+           res.render('error');
+       });
+    }
 });
-router.get('/login', (req,res)=>{
-    res.render('login')
-});
+
 
 module.exports = router;

@@ -13,9 +13,12 @@ app.set('view engine', 'hbs');
 
 var hbs = require('hbs');
 hbs.registerPartials(`${__dirname}/views/partials`);
+hbs.registerPartials(`${__dirname}/views/partials/mainpage`);
 
 var hbsUtils = require('hbs-utils')(hbs);
-hbsUtils. registerWatchedPartials(`${__dirname}/views/partials`);
+hbsUtils.registerWatchedPartials(`${__dirname}/views/partials`);
+hbsUtils.registerWatchedPartials(`${__dirname}/views/partials/mainpage`);
+
 
 app.use(logger('dev'));
 app.use(express.json());
