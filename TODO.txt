@@ -1,0 +1,12 @@
+>>partials:
+    navbar
+    destinos
+    divquienes
+    footer
+    formlogin
+    formsignup
+
+>>layout:
+    body con parallax
+
+>>pasar variables con handlebars para cargar diferentes partials sobre el layout

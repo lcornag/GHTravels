@@ -17,8 +17,6 @@ $(window).on("scroll",function(){
     }
 });
 
-
-
 //header opacity
 $(window).scroll(function() {
     divTransparency();

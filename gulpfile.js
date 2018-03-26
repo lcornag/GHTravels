@@ -3,14 +3,18 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minCSS = require('gulp-clean-css');
 
+
 gulp.task('default', ['browser','minJS','minCSS']);
+
 gulp.task('browser', function(){
     browserSync.init({
         server:{
-            baseDir: "./"
+            baseDir: "./",
+            port: '3000'
         }
     });
 });
+
 gulp.task('minJS', function(){
     return gulp.src('assets/js/main.js')
         .pipe(uglify())

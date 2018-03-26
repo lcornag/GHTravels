@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
               {id:3, name:'Nicaragua', precio:520},
               {id:4, name:'Peru', precio:800},
               {id:5, name:'Malaysia', precio:899},
-              {id:6, name:'Suiza', precio:320}
+              {id:6, name:'Suiza', precio:320},
           ],
           layout:false
   });
