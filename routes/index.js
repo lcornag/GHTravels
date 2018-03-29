@@ -71,5 +71,16 @@ router.get('/:reglog', function(req,res,next){
     }
 });
 
+//simple hashCode encryption
+function hashCodeEnc (str){
+    var hash = 0;
+    if (str.length == 0) return hash;
+    for (i = 0; i < str.length; i++) {
+        char = str.charCodeAt(i);
+        passHash = ((hash<<5)-hash)+char;
+        passHash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+}
 
 module.exports = router;
