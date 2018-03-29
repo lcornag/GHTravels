@@ -1,12 +1,2 @@
->>partials:
-    navbar
-    destinos
-    divquienes
-    footer
-    formlogin
-    formsignup
+-->crear database script.sh -> guardar usuario JSON en database;
 
->>layout:
-    body con parallax
-
->>pasar variables con handlebars para cargar diferentes partials sobre el layout

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>GeeksHubs Travels</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
+</head>
+<body>
+    <section id="navigationbar">{{> navbar}}</section>
+
+    <section id="inicio" class="parallax--bg">
+        <p>{{usuario.username}}</p>
+        <p>{{usuario.psw}}</p>
+    </section>
+    <footer>{{> footer}}</footer>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../javascripts/main.js"></script>
+    <script src="../javascripts/parallaxInicio.js"></script>
+</body>
+</html>

@@ -61,7 +61,7 @@ router.get('/:reglog', function(req,res,next){
    }else{
        // mainpage 404 handler
        next(createError(404));
-       app.use(function(err, req, res, next) {
+       app.use(function(err, req, res) {
            res.locals.message = err.message;
            res.locals.error = req.app.get('env') === 'development' ? err : {};
            // render the error page
@@ -70,17 +70,23 @@ router.get('/:reglog', function(req,res,next){
        });
     }
 });
+//TESTING JSON FROM FORM
+router.post('/register', function(req,res){
+    var user = req.body;
+    user.psw = (function(){
+        var hash = 0;
+        for (i = 0; i < req.body.psw.length; i++) {
+            char = req.body.psw.charCodeAt(i);
+            hash = ((hash<<5)-hash)+char;
+            hash = hash & hash; // Convert to 32bit integer
+        }
+        return hash;
+    })();
+    console.log(user);
+    res.render('vacio.hbs',{
+        usuario: user
+    });
+});
 
-//simple hashCode encryption
-function hashCodeEnc (str){
-    var hash = 0;
-    if (str.length == 0) return hash;
-    for (i = 0; i < str.length; i++) {
-        char = str.charCodeAt(i);
-        passHash = ((hash<<5)-hash)+char;
-        passHash = hash & hash; // Convert to 32bit integer
-    }
-    return hash;
-}
 
 module.exports = router;

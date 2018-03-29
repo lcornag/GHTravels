@@ -11,113 +11,47 @@
 <section id="navigationbar">
     {{> navbar}}
 </section>
-    <section id="inicio" class="parallax--bg">
-        <div id="gridprincipal" class="container-fluid">
-            <link rel='stylesheet' href='/stylesheets/signup.css'/>
-            <form action="" id="signUp">
-                <div id="registerCard" class="container-fluid">
-                    <h1>Regístrate</h1>
-                    <p>Rellena los campos para crearte una cuenta</p>
-                    <div id="hr"><hr></div>
+<section id="inicio" class="parallax--bg">
+    <div id="gridprincipal" class="container-fluid">
+        <link rel='stylesheet' href='/stylesheets/signup.css'/>
+        <form name="form" id="signUp" method="post">
+            <div id="registerCard" class="container-fluid">
+                <h1>Regístrate</h1>
+                <p>Rellena los campos para crearte una cuenta</p>
+                <div id="hr"><hr></div>
 
-                    <label for="username"><b>Nombre de usuario</b></label>
-                    <input type="text" placeholder="Usuario" name="username" required>
+                <label for="username"><b></b></label>
+                <input type="text" placeholder="Usuario" name="username">
 
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="ejemplo@ejemplo.com" name="email" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="ejemplo@ejemplo.com" name="email">
 
-                    <label for="psw"><b>Contraseña</b></label>
-                    <input type="password" placeholder="Introducir contraseña" name="psw" required>
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" id="psw" placeholder="Introducir contraseña" name="psw">
 
-                    <label for="psw-repeat"><b>Repetir contraseña</b></label>
-                    <input type="password" placeholder="Reintroducir contraseña" name="psw-repeat" required>
+                <label for="psw-repeat"><b>Repetir contraseña</b></label>
+                <input type="password" placeholder="Repetir contraseña" name="pswconfirm">
 
-                    <label>
-                        <input type="checkbox" checked="checked" name="rememberMe" style="margin-bottom:15px"> Remember me
-                    </label>
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-                    <div class="clearfix">
-                        <div class="row">
-                            <button type="button" class="cancelbtn col">Cancel</button>
-                            <button type="submit" class="signupbtn col">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <footer>
-        <div class="row">
-            <div class="col">
-                <div class="footerTitle">¿Necesitas ayuda?</div>
-                <ul id="Ayuda">
-                    <li>123456789</li>
-                    <li><a href="mailto:">travel@geekstravels.com</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="footerTitle col">Información</div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <ul class="linksAyuda">
-                            <li><a href="">Quienes somos</a></li>
-                            <li><a href="">Preguntas frecuentes</a></li>
-                            <li><a href="">Política de privacidad</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <ul class="linksAyuda">
-                            <li><a href="">Condiciones generales</a></li>
-                            <li><a href="">Aviso legal</a></li>
-                            <li><a href="">Contacto</a></li>
-                        </ul>
+                <div class="clearfix">
+                    <div class="row">
+                        <button type="button" class="cancelbtn col" onclick="relocateHome()">Cancel</button>
+                        <button type="submit" class="signupbtn col">Sign Up</button>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="footerTitle">Suscríbete a la newsletter</div>
-                <form action="">
-                    <input type="email" placeholder="email" id="sendEmail">
-                    <br>
-                    <button class="btn btn-outline-light">Enviar</button>
-                </form>
-            </div>
-        </div>
-        <div id="footerRow" class="row">
-            <hr>
-            <div class="col">
-                <div  id="redesSociales">
-                    <ul>
-                        <li class="nav-item">
-                            <div id="tw"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="wp"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="fb"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="ig"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="lk"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="yt"><a href=""></a></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../javascripts/main.js"></script>
-    <script src="../javascripts/parallaxInicio.js"></script>
+        </form>
+    </div>
+</section>
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../javascripts/main.js"></script>
+<script src="../javascripts/parallaxInicio.js"></script>
 </body>
 </html>

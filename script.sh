@@ -7,3 +7,4 @@ apt-get install -y apache2
 apt-get install -y nodejs
 apt-get install -y mysql-server
 chmod o+rwX /var/www/html
+
