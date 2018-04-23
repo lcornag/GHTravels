@@ -1,8 +1,6 @@
-/idea
+/.idea
+/.vagrant
 /bower_components
 /node_modules
-/public/bower_components
-/assets/estilos.min.css
-/assets/main.min.js
-/.vagrant
-/.idea
+package-lock.json
+/logs

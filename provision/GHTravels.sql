@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS GHTravels CHARACTER SET Latin1 COLLATE latin1_spanish_ci;
+USE GHTravels;
+CREATE TABLE usuarios (id INT NOT NULL AUTO_INCREMENT, username VARCHAR(20) NOT NULL, email VARCHAR(30) NOT NULL, password VARCHAR(30) NOT NULL, hash VARCHAR(80) NOT NULL, admin INT(1) NOT NULL default 0, active INT(1) NOT NULL DEFAULT 0, PRIMARY KEY(id));
+INSERT INTO usuarios (username, email, password, hash, admin, active) VALUES ('admin', 'admin@admin.com', 'root', 'root', 1, 1);
+CREATE TABLE viajes (id INT AUTO_INCREMENT NOT NULL, ciudad VARCHAR(45) NOT NULL, precio FLOAT(8) NOT NULL, imagen VARCHAR(45) NOT NULL, active INT(1) NOT NULL DEFAULT 1, PRIMARY KEY(id));
+INSERT INTO viajes (ciudad, precio, imagen) VALUES ('Finland', 399, '/public/images/destinos/Finland1.jpg');
+INSERT INTO viajes (ciudad, precio, imagen) VALUES ('Marruecos', 670, '/public/images/destinos/Marruecos1.jpg');
+INSERT INTO viajes (ciudad, precio, imagen) VALUES ('Nicaragua', 520, '/public/images/destinos/Nicaragua1.jpg');
+INSERT INTO viajes (ciudad, precio, imagen) VALUES ('Peru', 800, '/public/images/destinos/Peru1.jpg');
+INSERT INTO viajes (ciudad, precio, imagen) VALUES ('Malaysia', 899, '/public/images/destinos/Malaysia1.jpg');
+INSERT INTO viajes (ciudad, precio, imagen) VALUES ('Suiza', 320, '/public/images/destinos/Suiza1.jpg');

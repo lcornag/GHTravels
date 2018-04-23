@@ -25,22 +25,23 @@
 </section>
 <section id="destinos">
     <div class="container-fluid" id="contenedorTotalDestinos">
+
         <div class="row">
-            {{# each ciudades}}
-                <div class="col">
-                    <div class="destinoContainer" onclick="goDestino('{{name}}')">
-                        <div class="destinoBackground" id="destino1" style="background-image: url('/images/destinos/{{name}}1.jpg')"></div>
-                        <div class="destinoDescription row">
-                            <div class="lugar col-7">
-                                <p>{{name}}</p>
-                            </div>
-                            <div class="precioviaje col-5">
-                                <p>Desde €{{precio}}</p>
+                {{# each viajes}}
+                    <div class="col">
+                        <div class="destinoContainer" onclick="goDestino('{{ciudad}}')">
+                            <div class="destinoBackground" id="destino1" style="background-image: url('{{imagen}}')"></div>
+                            <div class="destinoDescription row">
+                                <div class="lugar col-7">
+                                    <p>{{ciudad}}</p>
+                                </div>
+                                <div class="precioviaje col-5">
+                                    <p>Desde €{{precio}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            {{/each}}
+                {{/each}}
         </div>
     </div>
 </section>

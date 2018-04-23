@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>GeeksHubs Travels</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href="/public/stylesheets/mainStyle.css" />
+    <link rel='stylesheet' href="/public/stylesheets/carrito.css" />
+</head>
+<body>
+<section id="navigationbar">
+    {{> navbar }}
+</section>
+<section id="inicio" class="parallax--bg">
+    <div id="whole">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row" id="dcto">
+                        <div class="rowextra" > ¿Quieres un 15% de descuento en tu próximo viaje?</div>
+                        <div class="rowextra">pincha <a href="#"> aquí</a> para más información </div>
+                    </div>
+                    <div class="row" id="cantidaditems">
+                        <div><p> Tu carrito (nº items)</p></div>
+                    </div>
+                    <div class="row">
+                        <div id="cadaItemCarrito">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    {{> footer}}
+</footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="public/javascripts/main.js"></script>
+</body>
+</html>

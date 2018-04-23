@@ -1,0 +1,51 @@
+<section id="seccionListaDestinos">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <a href="/admin/crear-usuario" class="btn btn-primary btn-sm">Nuevo Usuario</a>
+            </div>
+            <div class="row" class="rowTable">
+                {{#if users.length}}
+                    <table class="table table-sm">
+                        <tr>
+                            <td>Usuario</td>
+                            <td>Email</td>
+                            <td>Password</td>
+                            <td>Hash</td>
+                            <td>Activo</td>
+                            <td>isAdmin</td>
+                            <td>Editar</td>
+                            <td>Eliminar</td>
+                        </tr>
+                        {{#each users}}
+                            <tr>
+                                <td>{{username}}</td>
+                                <td>{{email}}</td>
+                                <td>{{password}}</td>
+                                <td>{{hash}}</td>
+                                <td>
+                                    {{#if active}}
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    {{else}}
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    {{/if}}
+                                </td>
+                                <td>
+                                  {{#if isAdmin}}
+                                      <i class="fa fa-check" aria-hidden="true"></i>
+                                  {{else}}
+                                      <i class="fa fa-times" aria-hidden="true"></i>
+                                  {{/if}}
+                                </td>
+                                <td><a href="/admin/abrir-usuario/{{id}}"><i class="fa fa-pencil-square-o edit"
+                                                                             aria-hidden="true"></i></a></td>
+                                <td><a href="/admin/eliminar-usuario/{{id}}"><i class="fa fa-trash-o remove"
+                                                                                aria-hidden="true"></i></a></td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,37 +1,96 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var app = express();
+const express = require('express');
+const Sequelize = require('sequelize');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const hbs = require('hbs');
+const logger = require('morgan');
+const flash = require('connect-flash');
+let winston = require('./config/winston');
+let passport = require('passport');
+let LocalStrategy = require('passport-local').Strategy;
 
+let createError = require('http-errors');
+let SequelizeStore = require('connect-session-sequelize')(session.Store);
+let sequelize = require('./config/sqldb');
+
+let usuarioModelo = require('./models/usuarioModelo');
+
+let admins = require('./routes/admins');
+let index = require('./routes/index');
+let emailer = require('./routes/emailer');
+
+const app = express();
+app.use(cookieParser());
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.use('/', express.static(__dirname + '/'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 
-var hbs = require('hbs');
 hbs.registerPartials(`${__dirname}/views/partials`);
 hbs.registerPartials(`${__dirname}/views/partials/mainpage`);
 
-var hbsUtils = require('hbs-utils')(hbs);
-hbsUtils.registerWatchedPartials(`${__dirname}/views/partials`);
-hbsUtils.registerWatchedPartials(`${__dirname}/views/partials/mainpage`);
+app.use(flash());
+
+app.use(logger('combined',{stream: winston.stream}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+////////////////////////////////
+// passport & session config
+let myStore = new SequelizeStore({
+    db:sequelize
+});
+app.use(session({
+    secret:'secret',
+    name:'GHTravelsSession',
+    store: myStore,
+    resave:false,
+    saveUninitialized:true
+}));
+myStore.sync();
+
+app.use(passport.initialize());
+app.use(passport.session());
+///////////////////////////////
+
+app.use('/emailer',emailer);
+app.use('/', index);
+app.use('/admins', admins);
+
+passport.use(new LocalStrategy(
+    {
+        usernameField:'username',
+        passwordField:'password'
+    },
+    function(username, password, done) {
+        usuarioModelo.findOne({
+            where:{
+                username: username,
+                password: password
+            }
+        }).then(user=>{
+            if(!user) {
+                console.log("no");
+                return done(null, false);
+            }
+            if(user){
+                console.log(user);
+                return done(null, 'login correcto');
+            }
+        })
+    }
+));
 
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
+app.use((req,res,next)=>{
+    res.locals.user = req.user;
+    next();
+});
 // global error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -43,6 +102,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
-
-module.exports = app;
+app.listen(3000, ()=>{
+    console.log("Servidor levantado en el puerto 3000");
+});

@@ -8,58 +8,22 @@
     <link rel='stylesheet' href='/stylesheets/mainStyle.css' />
 </head>
 <body>
-    <section id="navigationbar">
-        <nav class="navbar" id="fullNav">
-            <a class="navbar-brand col" href="/">
-                <div class="row">
-                    <div class="col" id="logoImagen"></div>
-                    <div class="col" id="logoTexto">GeeksHubs Travels</div>
-                </div>
-            </a>
-            <div class="nav-item col-6 text-center" id="navbarList">
-                <div class="row" id="anchorLinks">
-                    <div class="col">
-                        <div class="anchorwrapper">
-                            <a class="nav-link" href="#destinos" id="anchor1">Destinos</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="anchorwrapper">
-                            <a class="nav-link" href="#nosotros" id="anchor2">Quiénes somos</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="anchorwrapper">
-                            <a class="nav-link" href="#mapa" id="anchor3">Dónde estamos</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <a class="nav-link text-right" href="/register">Sign up</a>
-                            </div>
-                            <div class="col">
-                                <a class="nav-link text-left" href="/login">Log in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </section>
+<section id="navigationbar">
+    {{> navbar}}
+</section>
     <section id="inicio" class="parallax--bg">
         <div id="gridprincipal" class="container-fluid">
             <link rel='stylesheet' href='/stylesheets/signup.css'/>
-            <form action="" id="signUp">
+            <form name="form" id="logIn" method="post">
                 <div id="registerCard" class="container-fluid">
                     <h1>Accede con tu cuenta</h1>
                     <div id="hr"><hr></div>
 
-                    <label for="usernameT"><b>Nombre de usuario</b></label>
-                    <input type="text" placeholder="UserN" name="userName" id="saveUsername"required>
+                    <label for="username"><b>Nombre de usuario</b></label>
+                    <input type="text" placeholder="UserN" name="username" id="saveUsername"required>
 
-                    <label for="psw"><b>Contraseña</b></label>
-                    <input type="password" placeholder="Introducir contraseña" name="psw" required>
+                    <label for="password"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Introducir contraseña" name="password" required>
 
                     <label>
                         <input type="checkbox" checked="checked" name="rememberMe" style="margin-bottom:15px"> Remember me
@@ -67,7 +31,7 @@
                     <div class="clearfix">
                         <div class="row">
                             <a href="#"><p>Olvidé mi contraseña</p></a>
-                            <button onclick="guardarData()" id="loginbtn" value="loginbtn" type="button" class="signupbtn col">Entrar </button>
+                            <button type="submit" class="signupbtn col">Log in</button>
                         </div>
                     </div>
                 </div>
@@ -75,75 +39,10 @@
         </div>
     </section>
     <footer>
-        <div class="row">
-            <div class="col">
-                <div class="footerTitle">¿Necesitas ayuda?</div>
-                <ul id="Ayuda">
-                    <li>123456789</li>
-                    <li><a href="mailto:">travel@geekstravels.com</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="footerTitle col">Información</div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <ul class="linksAyuda">
-                            <li><a href="">Quienes somos</a></li>
-                            <li><a href="">Preguntas frecuentes</a></li>
-                            <li><a href="">Política de privacidad</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <ul class="linksAyuda">
-                            <li><a href="">Condiciones generales</a></li>
-                            <li><a href="">Aviso legal</a></li>
-                            <li><a href="">Contacto</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="footerTitle">Suscríbete a la newsletter</div>
-                <form action="">
-                    <input type="email" placeholder="email" id="sendEmail">
-                    <br>
-                    <button class="btn btn-outline-light">Enviar</button>
-                </form>
-            </div>
-        </div>
-        <div id="footerRow" class="row">
-            <hr>
-            <div class="col">
-                <div  id="redesSociales">
-                    <ul>
-                        <li class="nav-item">
-                            <div id="tw"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="wp"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="fb"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="ig"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="lk"><a href=""></a></div>
-                        </li>
-                        <li class="nav-item">
-                            <div id="yt"><a href=""></a></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+       {{>  footer}}
     </footer>
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../javascripts/main.js"></script>
-    <script src="../javascripts/parallaxInicio.js"></script>
 </body>
 </html>

@@ -66,15 +66,11 @@ body {
     height:fit-content;
     padding:0;
 }
-.nav-link{
-    transition: background-color 0.5s;
-}
 .nav-link:hover{
     color:white;
     background-color: rgba(0,0,0,0.3);
 }
 .dropdown-menu{
-    right:0;
     left:auto !important;
 }
 .navbar * {
@@ -106,8 +102,66 @@ body {
 #navbarList a{
     white-space: nowrap;
 }
+.dropbtn {
+    border: none;
+    height:40px !important;
+    padding:0;
+}
+.dropdown {
+    display: inline-block;
+    padding:0 15px 0 15px;
+}
+.dropdown-content {
+    margin-left:-15px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn a{
+    width:fit-content;
+}
+.dropdown:hover{
+    background-color: rgba(0,0,0,1);
+}
+.dropdown-content a:hover{
+    background-color:rgba(1,1,1,1);
+    color:white;
+}
+#seccionListaDestinos button{
+    margin-left:10vh;
+    font-size: 20px;
+}
+#seccionListaDestinos button a{
+    color:white;
+    text-decoration: none;
+}
+#seccionListaDestinos table {
+    background-color: rgba(255,255,255,0.7);
+    color: black;
+    font-weight: bold;
+    max-width:90vw;
+    margin-left:10vh;
+}
+#seccionListaDestinos table td{
+    background-color: rgba(0,0,0,0.2);
+}
+#seccionListaDestinos a{
+    background-color: rgba(0,0,0,0) !important;
+}
 
-
+.detalleImagen {
+    height: 6vh;
+    width: 6vh;
+}
 #redesSociales li {
     -webkit-transition: -webkit-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;

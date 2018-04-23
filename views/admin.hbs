@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GeeksHubs Travels</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href="/public/stylesheets/mainStyle.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/components-font-awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<section id="navigationbar">
+    {{> navbar }}
+</section>
+<section id="inicio" class="parallax--bg">
+    <div id="gridprincipal" class="container-fluid">
+        <div id="seccionListaDestinos">
+            <div class="row">
+                <button type="button" class="btn btn-dark">
+                    <a href="/admins/crearDestino">Nuevo Destino</a>
+                </button>
+            </div>
+            <div class="row" class="rowTable">
+                {{#if viajes.length}}
+                    <table class="table table-align='center'">
+                        <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Precio</th>
+                                <th>Activo</th>
+                                <th>Ruta</th>
+                                <th>Imagen</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        {{#each viajes}}
+                            <tr>
+                                <td>{{ciudad}}</td>
+                                <td>{{precio}}</td>
+                                <td>
+                                    {{#if active}}
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    {{else}}
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    {{/if}}
+                                </td>
+                                <td>{{imagen}}</td>
+                                <td><img src="{{imagen}}" alt="{{viajes}}" class="detalleImagen"></td>
+                                <td>
+                                    <a href="/admin/abrir-destino/{{id}}">
+                                        <i class="fa fa-pencil-square-o edit" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/admin/eliminar-destino/{{id}}">
+                                        <i class="fa fa-trash-o remove" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    {{> footer}}
+</footer>
+
+
+
+
+
+<script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="public/javascripts/main.js"></script>
+</body>
+</html>

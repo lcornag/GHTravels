@@ -1,0 +1,24 @@
+body{
+    font-family: Lato;
+}
+#whole{
+    width: auto;
+    height: 70vh;
+    margin: 5vh 2vh 0 2vh;
+    border: 1px solid black;
+}
+.row,
+.col-4,
+.col-8 {
+    border: 1px solid pink;
+}
+#dcto div{
+    width:100%;
+    text-align: center;
+    background: rgba(255,255,255,0.4);
+}
+#cantidaditems div{
+    width: 80%;
+    text-align: left;
+    margin-top:5vh;
+}

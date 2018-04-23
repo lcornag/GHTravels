@@ -9,25 +9,39 @@
     height:fit-content;
     width:60vh;
     background-color: rgba(0,0,0,0.5);
-    margin-top:20vh;
+    margin-top:14vh;
     padding:0;
     border:1px solid black;
 }
-#registerCard h1, p{
+#registerCard h1{
     margin:1vh 0 0 1vh;
+}
+form label:not(.formLabels){
+    margin-left:1vh;
 }
 #hr hr{
     background-color: rgba(0,0,0,0.5);
     height:1px;
 }
-label{
-    margin:0 0 0 1vh;
-    padding-bottom: 5px;
+#signUp{
+    display: block;
 }
-input[type=text], input[type=password] {
+#signUp label{
+    display: block;
+}
+h3{
+    white-space: nowrap;
+}
+.formLabels{
+    margin:2.5vh 0 0 1vh;
+    padding-bottom: 4px;
+    display:block;
+}
+input{
     width:58vh;
-    margin:0 0 2vh 1vh;
-    padding:8px 5px;
+    height:4vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
     display: block;
     border: none;
     background: white;

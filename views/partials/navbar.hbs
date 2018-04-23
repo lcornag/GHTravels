@@ -7,6 +7,19 @@
     </a>
     <div class="nav-item text-center" id="navbarList">
         <div class="row" id="anchorLinks">
+            {{#if isAdmin}}
+                <div class="col">
+                    <div class="dropdown">
+                        <div class="dropbtn">
+                           <a class="nav-link">Admin</a>
+                        </div>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="http://localhost:8080/admins/panelDestinos">Destination Panel</a>
+                            <a class="nav-link" href="http://localhost:8080/admins/panelUsuarios">User Panel</a>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
             <div class="col">
                 <div class="anchorwrapper">
                     <a class="nav-link" href="#destinos" id="anchor1">Destinos</a>
@@ -22,14 +35,15 @@
                     <a class="nav-link" href="#mapa" id="anchor3">Dónde estamos</a>
                 </div>
             </div>
-            <div class="col">
-                        <a class="nav-link text-right" href="/register">Sign up</a>
-            </div>
-            <div class="col">
-                <a class="nav-link text-left" href="/login"">Log in</a>
-            </div>
+
+            {{#unless user}}
+                <div class="col">
+                            <a class="nav-link text-right" href="/register">Sign up</a>
                 </div>
-            </div>
+                <div class="col">
+                    <a class="nav-link text-left" href="/login">Log in</a>
+                </div>
+            {{/unless}}
         </div>
     </div>
 </nav>

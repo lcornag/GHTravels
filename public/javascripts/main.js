@@ -13,16 +13,19 @@ function divTransparency() {
     $('.navbar').css("background-color", "rgba(52,58,64," + tValue + ")")
 }
 
-function goDestino(name){
-    location.href = '/destino/'+ name;
+function goDestino(ciudad){
+    location.href = '/destino/'+ ciudad;
+
 }
 
 function relocateHome(){
     location.href="/";
 }
-
-function guardarData(){
-    var userName = document.getElementById("saveUsername");
-    localStorage.setItem("loginbtn", userName.value);
-    relocateHome();
+$(window).scroll(function(){
+    parallax();
+});
+function parallax(){
+    var verticalScroll = $(window).scrollTop();
+    $('.parallax--bg').css('background-position',
+        'center '+(verticalScroll*0.5)+'px')
 }

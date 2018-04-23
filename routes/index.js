@@ -1,91 +1,119 @@
-var express = require('express');
-var router = express.Router();
-var app = express();
-var createError = require('http-errors')
+const express = require('express');
+const router = express.Router();
+const usuarios = require('../models/user');
+const viajes = require('../models/destiny');
+const atob = require('atob');
+const createError = require('http-errors');
+const usuarioController = require('../controllers/usuarioController');
+const viajesController = require('../controllers/ViajesController');
+const passport = require('passport');
 
-let ciudades = [
-    {id:1, name:'Finland', precio:399},
-    {id:2, name:'Marruecos', precio:670},
-    {id:3, name:'Nicaragua', precio:520},
-    {id:4, name:'Peru', precio:800},
-    {id:5, name:'Malaysia', precio:899},
-    {id:6, name:'Suiza', precio:320},
-];
-/* GET home page. */
-router.get('/', function(req, res, next) {
-      res.render('mainPage', {
-          title: 'Geekshubs Travels',
-          layout:false,
-          ciudades: ciudades,
-          reglog: [
-              {register: 'signup'},
-              {login: 'login'}
-          ]
-  });
+/* home page. */
+router.get('/', (req, res,next)=> {
+    viajesController.findActive(req, res, next);
 });
 
+router.get('/destino/:ciudad', (req, res, next)=>{
+    viajes.findByCity(req.params.ciudad, (error,viajes)=>{
+        if(error) return res.status(500).json(error);
 
-function listaCiudades(ciudades){
-    var arrayCiudades = Array();
-    for(var i = 0;i < ciudades.length; i++){
-        arrayCiudades.push(ciudades[i].name);
-    }
-    return arrayCiudades;
-}
-router.get('/destino/:id', function(req, res,next) {
-    var arrayCiudades = listaCiudades(ciudades);
-    if(arrayCiudades.includes(req.params.id)) {
-        res.render('destino',
-            {
-                id: req.params.id,
-                layout: false
-            });
-    }else{
-        //destino/404 handler
+        if (req.session.isUserLogged === 1) {
+            res.render('destino',{
+                title:"GeeksHubs Travels",
+                isUserLogged : req.session.isUserLogged,
+                user: req.session.username,
+                viajes
+            })
+        }
+        else {
+            res.redirect('/')
+        }
         next(createError(404));
-        app.use(function(err, req, res, next) {
+        express.use(function(err, req, res) {
             res.locals.message = err.message;
             res.locals.error = req.app.get('env') === 'development' ? err : {};
             // render the error page
             res.status(err.status || 500);
             res.render('error');
         });
-    }
+    })
+});
+router.get('/login', (req,res,next)=>{
+    res.render('login', {
+        title:'Log in'
+    })
+});
+router.get('/register',(req,res,next)=> {
+    res.render('register', {
+        title: 'Registrate en GH Travels'
+    })
 });
 
-router.get('/:reglog', function(req,res,next){
-   if(req.params.reglog === 'login'){
-       res.render('login');
-   }else if(req.params.reglog === 'register'){
-       res.render('register');
-   }else{
-       // mainpage 404 handler
-       next(createError(404));
-       app.use(function(err, req, res) {
-           res.locals.message = err.message;
-           res.locals.error = req.app.get('env') === 'development' ? err : {};
-           // render the error page
-           res.status(err.status || 500);
-           res.render('error');
-       });
-    }
+router.post('/login', passport.authenticate('local',{
+    successRedirect: '/',
+    failureRedirect: '/login',
+}));
+
+router.get('/profile', function(req, res){
+    res.render('profile', {title:'Profile'});
 });
-//TESTING JSON FROM FORM
-router.post('/register', function(req,res){
-    var user = req.body;
-    user.psw = (function(){
-        var hash = 0;
-        for (i = 0; i < req.body.psw.length; i++) {
-            char = req.body.psw.charCodeAt(i);
-            hash = ((hash<<5)-hash)+char;
-            hash = hash & hash; // Convert to 32bit integer
+
+
+router.get('/carrito',(req,res,next)=>{
+    res.render('carrito', {
+        title:'Tu carrito de compra'
+    })
+});
+
+router.post('/register', function (req, res,next) {
+    usuarioController.nuevoUsuario(req, res);
+});
+
+
+router.get('/activate/:id', function(req,res,next){
+    usuarioController.activarUsuario(req,res);
+});
+
+router.get('/recuperarPassword/:id', (req,res,next)=>{
+    let id = atob(req.params.id);
+    usuarios.findById(id,(error, result)=>{
+        if(result){
+            res.render('recuperarPassword', {
+                result: result[0]
+            });
+        }else {
+            return res.status(500).json(error);
         }
-        return hash;
-    })();
-    console.log(user);
-    res.render('vacio.hbs',{
-        usuario: user
     });
+    next(createError(404));
+    express.use(function(err, req, res) {
+        res.locals.message = err.message;
+        res.locals.error = req.app.get('env') === 'development' ? err : {};
+        // render the error page
+        res.status(err.status || 500);
+        res.render('error');
+    });
+});
+router.post('/recuperarPassword', (req,res,next)=>{
+    let user = {};
+    user.id = req.body.id;
+    user.password = req.body.password;
+
+    usuarios.updatePassword(user, (error, result)=>{
+        if(result){
+            res.redirect('/passwordCambiado');
+        } else {
+            res.status(500).json('Error al editar usuario '+ error);
+        }
+    });
+});
+router.get('/signout',(req,res)=>{
+    req.session.destroy();
+    res.redirect('/');
+});
+router.get('/newPassword', function(req, res, next) {
+    res.render('passwordCambiado',
+        { title: 'Cambio de Password' })
 });
 
 
